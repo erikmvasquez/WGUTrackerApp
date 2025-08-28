@@ -4,8 +4,9 @@
   <meta charset="UTF-8">
   <title>WGU Tracker App</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 40px; background: #f9f9f9; color: #333; }
+    body { font-family: Arial, sans-serif; margin: 40px; background: #f9f9f9; color: #333; line-height: 1.6; }
     h1 { color: #004080; }
+    h2 { color: #004080; margin-top: 30px; }
     a.button {
       display: inline-block;
       padding: 10px 15px;
@@ -34,13 +35,24 @@
   
   <h2>Download</h2>
   <p>
-    <a href="https://github.com/erikmvasquez/WGUTrackerApp/releases/download/WGUTrackerApp-v0.1.0.apk/WGUTrackerApp-v0.1.0.apk" class="button">
+    <a href="https://github.com/erikmvasquez/WGUTrackerApp/releases/download/v1.0.0/WGUTrackerApp-v0.1.0.apk" class="button">
       Download APK (v0.1.0)
     </a>
   </p>
-  <p><em>Download the APK file above to install.</em></p>
+  <p><em>Download the APK file above to install on an Android device.</em></p>
 
-  <h2>Source Code</h2>
+  <h2>Option 1: Install APK on an Android Device</h2>
+  <ol>
+    <li>Download the APK file from the button above.</li>
+    <li>On your Android device, go to <strong>Settings → Security (or Privacy)</strong> and enable 
+        <strong>“Install unknown apps”</strong> for the browser or Files app you will use.</li>
+    <li>Open the downloaded <code>WGUTrackerApp-v0.1.0.apk</code> file from your Downloads folder.</li>
+    <li>Tap <strong>Install</strong>.</li>
+    <li>After installation, open the <strong>WGU Tracker App</strong> from your app drawer.</li>
+    <li>Create an account on the login screen, then begin adding <strong>terms, courses, and assessments</strong>.</li>
+  </ol>
+
+    <h2>Source Code</h2>
   <p>
     You can also view or download the full project source code here:<br>
     <a href="https://gitlab.com/wgu-gitlab-environment/student-repos/evasq56/d424-software-engineering-capstone/-/tree/working?ref_type=heads" target="_blank">
@@ -48,8 +60,11 @@
     </a>
   </p>
 
-  <h2>Run Locally in Visual Studio</h2>
+  <h2>Option 2: Run the App from Source in Visual Studio</h2>
   <ol>
+    <li>Clone the GitLab repository:<br>
+      <pre>git clone https://gitlab.com/wgu-gitlab-environment/student-repos/evasq56/d424-software-engineering-capstone.git</pre>
+    </li>
     <li>Open <strong>WGUTrackerApp.sln</strong> in <strong>Visual Studio 2022</strong> (or newer).</li>
     <li>Ensure you have the following installed:
       <ul>
@@ -59,8 +74,22 @@
       </ul>
     </li>
     <li>Set the startup project to <strong>WGUTrackerApp</strong>.</li>
-    <li>Select an Android emulator from the toolbar.</li>
+    <li>Select an Android emulator (e.g., Pixel 7 Pro - API 35) from the toolbar.</li>
     <li>Click <strong>Run</strong> to build and deploy the app.</li>
   </ol>
+
+
+
+  <h2>Troubleshooting</h2>
+  <ul>
+    <li><strong>App not installed:</strong> Uninstall any previous version of the app, then try again.</li>
+    <li><strong>Emulator install fails (ABI mismatch):</strong> 
+      Your Visual Studio emulator is usually <code>x86_64</code>. If the APK is <code>arm64</code>-only, it won’t install. 
+      Either create an <strong>ARM emulator</strong> or rebuild an <code>x86_64</code> APK in Visual Studio.</li>
+    <li><strong>Device not detected in Visual Studio:</strong> 
+      On your phone, enable <em>Developer Options: USB Debugging</em>, then reconnect and accept the USB debug prompt.</li>
+    <li><strong>Still having issues?</strong> You can always run the app directly from source in Visual Studio 
+      using the steps above, which automatically builds and installs the correct version for your emulator/device.</li>
+  </ul>
 </body>
 </html>
