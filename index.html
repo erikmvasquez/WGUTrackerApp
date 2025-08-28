@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>WGU Tracker App</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 40px; background: #f9f9f9; color: #333; }
+    h1 { color: #004080; }
+    a.button {
+      display: inline-block;
+      padding: 10px 15px;
+      margin: 10px 0;
+      background: #004080;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    a.button:hover { background: #0066cc; }
+    pre {
+      background: #eee;
+      padding: 10px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>WGU Tracker App</h1>
+  <p>
+    The WGU Tracker App is a mobile application built with .NET MAUI and SQLite to help WGU students
+    organize their academic progress. It allows users to create and manage terms, courses, and assessments,
+    with detailed views for instructors, notes, and deadlines.
+  </p>
+  
+  <h2>Download</h2>
+  <p>
+    <a href="https://github.com/erikmvasquez/WGUTrackerApp/releases/download/WGUTrackerApp-v0.1.0.apk/WGUTrackerApp-v0.1.0.apk" class="button">
+      Download APK (v0.1.0)
+    </a>
+  </p>
+  <p><em>Download the APK file above to install on an Android device.</em></p>
+
+  <h2>Source Code</h2>
+  <p>
+    You can also view or download the full project source code here:<br>
+    <a href="https://gitlab.com/wgu-gitlab-environment/student-repos/evasq56/d424-software-engineering-capstone/-/tree/working?ref_type=heads" target="_blank">
+      View Source Code on GitLab
+    </a>
+  </p>
+
+  <h2>Run Locally in Visual Studio</h2>
+  <ol>
+    <li>Clone the repository:<br>
+      <pre>git clone https://gitlab.com/wgu-gitlab-environment/student-repos/evasq56/d424-software-engineering-capstone.git</pre>
+    </li>
+    <li>Open <strong>WGUTrackerApp.sln</strong> in <strong>Visual Studio 2022</strong> (or newer).</li>
+    <li>Ensure you have the following installed:
+      <ul>
+        <li>.NET 8 SDK</li>
+        <li>Visual Studio workload: <em>.NET Multi-platform App UI development (.NET MAUI)</em></li>
+        <li>Android Emulator or physical Android device connected via USB</li>
+      </ul>
+    </li>
+    <li>Set the startup project to <strong>WGUTrackerApp</strong>.</li>
+    <li>Select an Android device/emulator from the toolbar.</li>
+    <li>Click <strong>Run</strong> (▶) to build and deploy the app.</li>
+  </ol>
+</body>
+</html>
